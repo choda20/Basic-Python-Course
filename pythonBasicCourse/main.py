@@ -1,6 +1,6 @@
 def ask_for_user_input():
     user_input = input("Guess a letter: ")
-    return user_input
+    return user_input.lower()
 
 
 def draw_hanged_man(man_status):
