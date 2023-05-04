@@ -33,11 +33,23 @@ def fix_age(age):
 
 
 def chocolate_maker(small, big, x):  # 5.3.7
-    pass
+    use_big_chocolate = x // 5 if big >= x else big
+    remaining_length = x - use_big_chocolate * 5
+    if remaining_length <= small:
+        print(str(True))
+        return True
+    print(str(False))
+    return False
 
 
-def ex541():  # 5.4.1
-    pass
+def func1(num1, num2):  # 5.4.1
+    '''
+    function that returns the sum of the given parameters
+    :param num1: a number
+    :param num2: a number
+    :return: a float/integer containing the sum of the parameters
+    '''
+    return num1 + num2
 
 
 if __name__ == '__main__':
@@ -48,6 +60,7 @@ if __name__ == '__main__':
     print("\nex 5.3.6: ")
     filter_teens(2, 13, 1)
     print("\nex 5.3.7: ")
-    chocolate_maker()
+    chocolate_maker(3, 2, 10)
     print("\nex 5.4.1: ")
-    ex541()
+    func1(5,10)
+    help(func1)
