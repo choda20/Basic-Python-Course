@@ -14,7 +14,7 @@ def ex342():  # 3.4.2
     print(user_input[0] + user_input[1:].replace(user_input[0], "e"))
 
 
-def ex343():
+def ex343(): # 3.4.3
     user_input = input("Enter a string: ")
     half_length = len(user_input) // 2
     print(user_input[0:half_length].lower() + user_input[half_length:].upper())

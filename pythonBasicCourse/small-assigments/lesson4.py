@@ -1,7 +1,7 @@
 import datetime
 
 
-def ex422():
+def ex422(): # 4.2.2
     user_input = input("Enter a string: ")
     if user_input[-1::-1].lower().replace(" ", "") == user_input[0::].lower().replace(" ", ""):
         print("OK")
@@ -9,7 +9,7 @@ def ex422():
         print("NOT")
 
 
-def ex423():
+def ex423(): # 4.2.3
     user_input = input("Insert the temperature you would like to convert: ").lower()  # assuming the input is valid
     temperature = float(user_input[0:len(user_input) - 1])
     if user_input.endswith("c"):
@@ -18,7 +18,7 @@ def ex423():
         print(str(((temperature * 5) - 160) / 9) + "C")
 
 
-def ex424():
+def ex424(): # 4.2.4
     user_input = input("Enter a date: ")
     date_list = user_input.split("/")
     week_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
