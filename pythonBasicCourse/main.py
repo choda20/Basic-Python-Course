@@ -1,6 +1,22 @@
-def ask_for_user_input():
-    user_input = input("Guess a letter: ")
-    return user_input.lower()
+def ask_for_user_input(text):
+    user_input = input(text).lower()
+    valid_input, user_input = is_valid_input(user_input)
+    print("Entered value is: " + user_input)
+    return valid_input
+
+
+def is_valid_input(letter_guessed):
+    valid_input = True
+    if not (letter_guessed.isalpha()) and (len(letter_guessed) > 1):
+        letter_guessed = "E3"
+        valid_input = False
+    elif len(letter_guessed) > 1:
+        letter_guessed = "E1"
+        valid_input = False
+    elif not letter_guessed.isalpha():
+        letter_guessed = "E2"
+        valid_input = False
+    return valid_input, letter_guessed
 
 
 def draw_hanged_man(man_status):
@@ -30,4 +46,5 @@ if __name__ == '__main__':
                         "|_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|\n" \
                         "                     __/ |\n                 |___/ "
     MAX_TRIES = 6
-    draw_hanged_man(7)
+    word_to_guess = ask_for_user_input("Enter a word: ")
+    print("_ " * len(word_to_guess))
