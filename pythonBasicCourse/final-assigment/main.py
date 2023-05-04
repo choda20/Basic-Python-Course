@@ -213,7 +213,7 @@ if __name__ == '__main__':
     print("\n" + show_hidden_word(secret_word, old_letters_guessed))
     while num_of_tries < MAX_TRIES and not check_win(secret_word, old_letters_guessed):  # main game loop, goes on as
         # long as the current number of wrong guesses < allowed wrong guesses and the player has yet to win
-        
+
         entered_letter = get_letter_from_user(old_letters_guessed)  # asks the user for input and validates it
 
         if entered_letter not in secret_word:  # letter is not a part of the word to guess
